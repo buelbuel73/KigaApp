@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "676880190972",
+    "firebase_url": "https://kigaapp-gammertingen.firebaseio.com",
+    "project_id": "kigaapp-gammertingen",
+    "storage_bucket": "kigaapp-gammertingen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:676880190972:android:32d1f7498b9a3011",
+        "android_client_info": {
+          "package_name": "com.recto.KigaApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "676880190972-8ahaskcik7b6f5rortdbcf4c4u4o67gn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZgEUs15u-GJ5SFELldTIJFPg4IDkvdIs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Medkit
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+    <div *ngIf="isTeam">
+    
+        <ion-card>
+            <ion-card-header color="primary">
+              <b>Aktuelle Krankmeldungen:</b>
+            </ion-card-header>
+          
+            <ion-list>
+                <ion-item detail="false" class="text" lines="inset" *ngFor="let item of items">
+
+                  
+
+                  am {{item.zeit}} {{item.kind}} <br> für {{item.dauer}}   
+                </ion-item>
+            </ion-list>
+
+          </ion-card>
+      
+    </div>
+
+
+    <div>
+    <ion-list>
+
+
+          <ion-list-header> Kind krank melden </ion-list-header>
+          <ion-item *ngFor="let kind of kindList | async" (click)="moreKindOptions(kind.name)">
+            <ion-icon name="medkit" color="danger" slot="end"></ion-icon>
+            <ion-label>
+              <h2>{{kind.name}}</h2>
+            </ion-label>
+
+            <input type="hidden" value=kind.name/>
+            
+          </ion-item>
+          
+    </ion-list>
+  </div>
+
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Service
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="card-background-page">
+  
+      <ion-card [routerLink]="['/app/tabs/speiseplan']">
+        <img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Fspeisek.jpg?alt=media&token=4bb0bf7f-1f0e-4255-a87e-25214a170fac"/>
+        <div class="card-title">PDF´s</div>
+        <div class="card-subtitle"><b>Speisepläne/Ferienplan/..</b></div>
+      </ion-card>
+    
+      <ion-card [routerLink]="['/app/tabs/angebote']">
+        <img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Fangebot.jpg?alt=media&token=1e919f1d-442b-433b-9ff0-b86f7a0e41a8"/>
+        <div class="card-title">Angebote</div>
+        <div class="card-subtitle"><b>aktuelle Angebote</b></div>
+      </ion-card>
+    
+      <ion-card  [routerLink]="['/app/tabs/faqs']">
+        <img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Ffaq-0.jpg?alt=media&token=4cea8829-fb7e-408e-a553-ccba9f34f050"/>
+        <div class="card-title">Fragen und Antworten</div>
+        <div class="card-subtitle"><b>wer nicht fragt</b></div>
+      </ion-card>
+    
+      <ion-card  [routerLink]="['/app/tabs/tipps']">
+        <img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Ftipps.jpg?alt=media&token=be51e88c-789d-4deb-b69d-16ef172362ee"/>
+        <div class="card-title">Tipps und Tricks</div>
+        <div class="card-subtitle"><b>braucht ein Jeder</b></div>
+      </ion-card>
+    
+      <ion-card  [routerLink]="['/app/tabs/feedback']">
+        <img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Ffeedback.jpg?alt=media&token=efc99401-548d-47c1-b183-f8c8f55d6cda"/>
+        <div class="card-title">Lob und Kritik</div>
+        <div class="card-subtitle"><b>muss auch sein</b></div>
+      </ion-card>
+    
+    </ion-content>
+  

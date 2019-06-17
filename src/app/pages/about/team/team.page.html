@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button class="show-back-button" [routerLink]="['/app/tabs/about']" [text]="''"></ion-back-button>
+            </ion-buttons>
+      <ion-title>
+        Das Team
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+      <ion-list>
+          <ion-item detail="false" class="text" lines="inset" *ngFor="let item of items">
+              <ion-card>
+                  <img src="{{item.img}}">
+                   <ion-card-content>
+                     <h1>{{item.name}}</h1>
+                     <p>ist bei uns seit {{item.begin}}</p>
+                     <p text-wrap>
+                       <b>{{item.rolle}}</b>
+                     </p>
+                     <p text-wrap>"...
+                     {{item.motto}}..."
+                   </p>
+                   </ion-card-content>
+                 </ion-card>
+          </ion-item>
+      </ion-list>
+  </ion-content>

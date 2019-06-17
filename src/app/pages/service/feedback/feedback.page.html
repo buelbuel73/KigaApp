@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button class="show-back-button" [routerLink]="['/app/tabs/service']" [text]="''"></ion-back-button>
+            </ion-buttons>
+      <ion-title>
+        Feedback
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+
+		<ion-list>
+		<b>Bewerten Sie nachfolgend unsere Arbeit</b>
+		<ion-card>
+		<ion-item (click)="cllike()">
+		<ion-thumbnail item-start>        
+			<img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Flike.jpg?alt=media&token=f96f2dcb-28f6-44e1-a677-bec5099642dc">
+		</ion-thumbnail>
+		likes
+  		<ion-badge item-end>
+  		{{(likes | async)?.length}}
+  		</ion-badge>
+  		</ion-item>
+  		
+  		<ion-item (click)="clneutral()">
+		<ion-thumbnail item-start>        
+			<img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Fneutral.jpg?alt=media&token=d9f5577f-da8b-4958-907a-c62086161db4">
+		</ion-thumbnail>
+		neutrals
+  		<ion-badge item-end>
+  		{{(neutrals | async)?.length}}
+  		</ion-badge>
+  		</ion-item>
+
+  		<ion-item (click)="clunlike()">
+		<ion-thumbnail item-start>        
+			<img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Funlike.jpg?alt=media&token=4553346c-e000-4dc8-bcda-9ff763342b04">
+		</ion-thumbnail>
+		unlikes
+  		<ion-badge item-end>
+  		{{(unlikes | async)?.length}}
+  		</ion-badge>
+  		</ion-item>
+  		</ion-card>
+	</ion-list>
+	
+	<ion-list>
+  <b>oder schreiben Sie uns ein Feedback</b>
+  
+	<ion-card>
+	<ion-textarea id="feedback" rows="4" maxLength="500" [(ngModel)]="feedback" placeholder="Beispielfeedback: unser Kindergarten ist der beste !!"></ion-textarea>
+  </ion-card>
+  
+  <div padding>
+        <ion-button type="submit" expand="block" (click)="sendelob()" item-center> <b>Feedback senden</b></ion-button>
+  </div>
+
+      </ion-list>
+    
+    
+    
+    </ion-content>

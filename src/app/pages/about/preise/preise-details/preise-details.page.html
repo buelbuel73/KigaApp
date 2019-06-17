@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button class="show-back-button" [routerLink]="['/app/tabs/preise']" [text]="''"></ion-back-button>
+            </ion-buttons>
+            <ion-title>
+                {{ (items | async)?.title }}
+              </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding>
+    <img src="{{ (items | async)?.img }}"/>
+    <h3>{{ (items | async)?.title }}</h3>
+    <p><ion-note>{{ (items | async)?.subtitle }}</ion-note></p>
+    <p>{{ (items | async)?.content1 }}</p>
+    <p>{{ (items | async)?.content2 }}</p>
+    <p>{{ (items | async)?.content3 }}</p>
+</ion-content>

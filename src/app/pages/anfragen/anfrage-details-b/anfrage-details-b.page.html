@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button class="show-back-button" [routerLink]="['/app/tabs/anfragen']" [text]="''"></ion-back-button>
+            </ion-buttons>
+            <ion-title>
+                Anfrage
+              </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+
+      <h3>{{ (itemsB | async)?.title }}</h3>
+      
+      <p>{{ (itemsB | async)?.content1 }}</p>
+      <p>{{ (itemsB | async)?.content2 }}</p>
+      <p>{{ (itemsB | async)?.content3 }}</p>
+      <div *ngFor="let kind of kindList | async">
+      <ion-list>
+        <ion-item>
+           <ion-label>
+              <h2>{{kind.name}}</h2>
+            </ion-label>
+    
+            <input type="hidden" value=kind.name/>
+      
+            <ion-select [(ngModel)]="anfragem.antwort" placeholder="ja/nein" cancel-text="ABBRECHEN">
+                <ion-select-option value="ja">ja</ion-select-option>
+                <ion-select-option value="nein">nein</ion-select-option>
+            </ion-select>
+        </ion-item>
+      </ion-list>
+
+      
+      
+        <ion-button expand="block" (click)="antwort(kind.name)" item-center>
+                <b>Antwort senden </b> 
+        </ion-button>
+      </div>
+    
+    </ion-content>

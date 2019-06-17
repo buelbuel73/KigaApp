@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button class="show-back-button" [routerLink]="['/app/tabs/service']" [text]="''"></ion-back-button>
+            </ion-buttons>
+      <ion-title>
+        PDF´s
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+
+  <div *ngFor="let item of items">
+  
+    <ion-card class="welcome-card">
+        <h5 text-center><b>Speiseplan vom {{item.speiseplan1}}</b></h5>
+        <ion-card-content>
+        <div (click)="viewFile(item.speiseplan1_pdf)">
+            <ion-row>
+                <ion-col col-4></ion-col>
+                <ion-col col-4>
+                  <ion-thumbnail>
+                  <img src="assets/pdf.png">
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col col-4></ion-col>
+              </ion-row>
+          </div>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card class="welcome-card">
+        <h5 text-center><b>Speiseplan vom {{item.speiseplan2}}</b></h5>
+        <ion-card-content>
+        <div (click)="viewFile(item.speiseplan2_pdf)">
+            <ion-row>
+                <ion-col col-4></ion-col>
+                <ion-col col-4>
+                  <ion-thumbnail>
+                  <img src="assets/pdf.png">
+                  </ion-thumbnail>
+                </ion-col>
+                <ion-col col-4></ion-col>
+              </ion-row>
+          </div>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-card class="welcome-card">
+      <h5 text-center><b>Ferienplan</b></h5>
+      <ion-card-content>
+      <div (click)="viewFile(item.ferienplan_pdf)">
+          <ion-row>
+              <ion-col col-4></ion-col>
+              <ion-col col-4>
+                <ion-thumbnail>
+                <img src="assets/pdf.png">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-4></ion-col>
+            </ion-row>
+        </div>
+      </ion-card-content>
+  </ion-card>
+      
+  </div>
+
+</ion-content>

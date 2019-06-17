@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Anfragen
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+      <ion-list>
+          <ion-item detail="false" class="text" lines="inset" *ngFor="let itemA of itemsA" routerLink="/app/tabs/anfrage-details-a/{{itemA.id}}">
+          <ion-thumbnail slot="start">
+              <img src="assets/mail2.png">
+          </ion-thumbnail>
+          <ion-label>
+              <h3 text-wrap><b>{{itemA.title}}</b></h3>
+          </ion-label>
+          </ion-item>
+     
+          <ion-item detail="false" class="text" lines="inset" *ngFor="let itemB of itemsB" routerLink="/app/tabs/anfrage-details-b/{{itemB.id}}">
+          <ion-thumbnail slot="start">
+              <img src="assets/mail2.png">
+          </ion-thumbnail>
+          <ion-label>
+              <h3 text-wrap><b>{{itemB.title}}</b></h3>
+          </ion-label>
+          </ion-item>
+
+          <ion-item detail="false" class="text" lines="inset" *ngFor="let itemC of itemsC" routerLink="/app/tabs/anfrage-details-c/{{itemC.id}}">
+          <ion-thumbnail slot="start">
+              <img src="assets/mail2.png">
+          </ion-thumbnail>
+          <ion-label>
+              <h3 text-wrap><b>{{itemC.title}}</b></h3>
+          </ion-label>
+          </ion-item>
+
+        </ion-list>
+    </ion-content>

@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button [routerLink]="['']" [text]="'zurück'"></ion-back-button>
+            </ion-buttons>
+      <ion-title>
+        Registrieren
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-card class="welcome-card">
+  
+        <ion-img src="/assets/Logo_Kiga.png"></ion-img>
+        <ion-card-content>
+            <p><b>Herzlich willkommen auf KigaApp</b>
+          <br><br>
+          Um unsere App vollumfänglich nutzen zu können müssen Sie sich erst registrieren.</p>
+        </ion-card-content>
+      </ion-card>
+      <form [formGroup]="signupForm" novalidate>
+        
+      <ion-item>
+      <ion-input
+        formControlName="fullName"
+        type="text"
+        placeholder="Ihr vollständiger Name">
+      </ion-input>
+      </ion-item>
+  
+      <ion-item>
+      <ion-input
+        formControlName="email"
+        type="email"
+        placeholder="Ihre Emailadresse">
+      </ion-input>
+      </ion-item>
+  
+      <ion-item>
+      <ion-input
+        formControlName="password" 
+        type="password" 
+        placeholder="Ihr Passwort">
+      </ion-input>
+      </ion-item>
+  
+      <p></p>
+      <ion-button expand="block" (click)="userSignup(signupForm)" [disabled]="!signupForm.valid" item-center>
+              <b>Registrieren</b> 
+      </ion-button>
+      <p></p>
+    <div>
+        <ion-checkbox checked="true" disabled="true">
+        </ion-checkbox><br>
+          <ion-label color="soft-grey" text-wrap>  Hiermit erklären Sie sich einverstanden mit unseren
+          <a class="item" href="#" onclick="window.open('https://firebasestorage.googleapis.com/v0/b/kigaapp-gammertingen.appspot.com/o/PDF%C2%B4s%2FDatenschutzbestimmungen_App.pdf?alt=media&token=be3e1d29-b178-4336-9bf7-db970e0c031a', '_system', 'location=yes'); return false;"> Datenschutzbestimmungen</a>
+          </ion-label>
+        </div>
+      </form>
+    </ion-content>

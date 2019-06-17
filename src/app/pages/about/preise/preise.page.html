@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button  class="show-back-button" [routerLink]="['/app/tabs/about']" [text]="''"></ion-back-button>
+            </ion-buttons>
+      <ion-title>
+        Auszeichnungen
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+      <ion-list>
+          <ion-item detail="false" class="text" lines="inset" *ngFor="let item of items" routerLink="/app/tabs/preise-details/{{item.id}}">
+          <ion-thumbnail slot="start">        
+            <img src="{{item.img}}">
+          </ion-thumbnail>
+          <ion-label>
+              <h6 text-wrap><b>{{item.title}}</b></h6>
+              <p><b>{{item.subtitle}}</b></p>
+          </ion-label>
+          </ion-item>
+      </ion-list>
+  </ion-content>

@@ -1,5 +1,8 @@
 {
   "name": "KigaAppV1.4",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }

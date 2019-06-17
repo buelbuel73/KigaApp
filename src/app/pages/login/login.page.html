@@ -1,0 +1,44 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>
+        Login
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/Logo_Kiga.png"></ion-img>
+      <ion-card-content>
+          <p><b>Herzlich willkommen auf KigaApp</b>
+        <br><br>
+        Um unsere App vollumfänglich nutzen zu können müssen Sie sich erst registrieren.</p>
+      </ion-card-content>
+    </ion-card>
+    <form [formGroup]="loginForm" novalidate> 
+    <ion-item>
+    <ion-input
+      [(ngModel)]="login"
+      formControlName="email"
+      type="email"
+      placeholder="Ihre Emailadresse">
+    </ion-input>
+    </ion-item> 
+    <ion-item>
+    <ion-input
+      formControlName="password" 
+      type="password" 
+      placeholder="Ihr Passwort">
+    </ion-input>
+    </ion-item>
+    <p></p>
+    <ion-button expand="block" (click)="userLogin(loginForm)" [disabled]="!loginForm.valid" item-center>
+            <b>Login</b> 
+    </ion-button>
+    </form>
+    <ion-button expand="block" fill="outline" routerLink="/register">  
+            Registrieren
+    </ion-button>
+    <ion-button expand="block" fill="outline" routerLink="/password-reset"> Passwort Reset
+    </ion-button> 
+  </ion-content>

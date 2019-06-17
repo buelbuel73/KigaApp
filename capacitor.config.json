@@ -1,0 +1,6 @@
+{
+  "appId": "com.recto.KigaAppGammertingen",
+  "appName": "KigaAppV1.4",
+  "bundledWebRuntime": false,
+  "webDir": "www"
+}

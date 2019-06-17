@@ -1,0 +1,87 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button class="show-back-button" [routerLink]="['/app/tabs/about']" [text]="''"></ion-back-button>
+            </ion-buttons>
+      <ion-title>
+        Die Einrichtung
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+      <div *ngFor="let item of items">
+          <ion-img src="/assets/Logo_Kiga.png"></ion-img>
+                  <ion-card class="welcome-card"> 
+                      <h5 text-center><b>Kontakt</b></h5> 
+                      <ion-card-content>
+                        <div color="soft-grey">{{item.adress_str}}</div>
+                        <div color="soft-grey">{{item.adress_ort}}</div>
+                        <div color="soft-grey">{{item.adress_tel}}</div>
+                        <div color="soft-grey">{{item.adress_mail}}</div>
+                      </ion-card-content>
+                  </ion-card>
+
+                  <ion-card class="welcome-card"> 
+                      <h5 text-center><b>Öffnungszeiten</b></h5>
+                      <ion-card-content>
+                        <div color="soft-grey">{{item.openday1}}</div>
+                        <div color="soft-grey">{{item.opentime1}}</div>
+                        <div color="soft-grey">{{item.openday2}}</div>
+                        <div color="soft-grey">{{item.opentime2}}</div>
+                      </ion-card-content>
+                  </ion-card>
+
+                  <ion-card class="welcome-card">
+                      <h5 text-center><b>Daten und Fakten im Überblick</b></h5>
+                      <ion-card-content>
+                        <div color="soft-grey">+ {{item.daten_fakten1}}</div>
+                        <div color="soft-grey">+ {{item.daten_fakten2}}</div>
+                        <div color="soft-grey">+ {{item.daten_fakten3}}</div>
+                        <div color="soft-grey">+ {{item.daten_fakten4}}</div>
+                        <div color="soft-grey">+ {{item.daten_fakten5}}</div>
+                        <div color="soft-grey">+ {{item.daten_fakten6}}</div>
+                        <div color="soft-grey">+ {{item.daten_fakten7}}</div>
+                        <div color="soft-grey">+ {{item.daten_fakten8}}</div>
+                      </ion-card-content>
+                  </ion-card>
+
+                  <ion-card class="welcome-card">
+                      <h5 text-center><b>Gebührenordnung zum Download</b></h5>
+                      <ion-card-content>
+                      <div (click)="viewFile(item.geb_ordnung)">
+                          <ion-row>
+                              <ion-col col-4></ion-col>
+                              <ion-col col-4>
+                                <ion-thumbnail>
+                                <img src="assets/pdf.png">
+                                </ion-thumbnail>
+                              </ion-col>
+                              <ion-col col-4></ion-col>
+                            </ion-row>
+                        </div>
+                      </ion-card-content>
+                      </ion-card>
+
+                  <ion-card class="welcome-card">
+                      <h5 text-center><b>{{item.title}}</b></h5>
+                      <img src="{{item.img1}}"/>
+                      <ion-card-content>
+                      <h2><b>{{item.subtitle}}</b></h2><br>
+                      <div color="soft-grey">{{item.content1}}</div><br>
+                      <div color="soft-grey">{{item.content2}}</div><br>
+                      <div color="soft-grey">{{item.content3}}</div><br>
+                      <img src="{{item.img2}}"/><br>
+                      <div color="soft-grey">{{item.content4}}</div><br>
+                      <div color="soft-grey">{{item.content5}}</div><br>
+                      <div color="soft-grey">{{item.content6}}</div><br>
+                      <img src="{{item.img3}}"/><br>
+                      <div color="soft-grey">{{item.content7}}</div><br>
+                      <div color="soft-grey">{{item.content8}}</div><br>
+                      <div color="soft-grey">{{item.content9}}</div>
+                      </ion-card-content>
+                  </ion-card>
+                   
+          
+      </div>
+  </ion-content>

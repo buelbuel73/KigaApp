@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Über uns
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="card-background-page">
+
+      
+      <ion-card [routerLink]="['/app/tabs/einrichtung']">
+        <img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Feinrichtung.jpg?alt=media&token=c80ca1f9-27eb-4387-840b-904bcba0d587"/>
+        <div class="card-title">die Einrichtung</div>
+        <div class="card-subtitle"><b>gestern .. heute .. morgen</b></div>
+      </ion-card>
+    
+      <ion-card [routerLink]="['/app/tabs/team']">
+        <img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Fteam.jpg?alt=media&token=70a7c199-f7f8-4db0-b8b0-88a8d887ea22"/>
+        <div class="card-title">das Team</div>
+        <div class="card-subtitle"><b>Leute von heute</b></div>
+      </ion-card>
+  
+      <ion-card [routerLink]="['/app/tabs/preise']">
+        <img src="https://firebasestorage.googleapis.com/v0/b/kigaapp-8dded.appspot.com/o/app_images%2Fpokale.jpg?alt=media&token=2c5c4e52-369e-4170-ad49-b1ba89b370cb"/>
+        <div class="card-title">Auszeichnungen</div>
+        <div class="card-subtitle"><b>ohne Fleiß kein Preis</b></div>
+      </ion-card>
+
+    </ion-content>
